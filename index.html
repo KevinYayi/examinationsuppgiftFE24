@@ -30,24 +30,31 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
-    <script>document.documentElement.classList.add('js')</script>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <script src="script.js"></script>
   </head>
 
   <body>
     <nav>
       <h1><a href="index.html">GritSushi</a></h1>
-      <div class="navConatainer">
+      <div class="navContainer">
         <ul id="listing" class="navlinks">
           <li><a class="link link-neutral" href="src/menu.html">MENU</a></li>
           <li><a class="link link-neutral" href="src/about.html">ABOUT</a></li>
-          <li><a class="link link-neutral" href="src/contact.html">CONTACT</a></li>
+          <li>
+            <a class="link link-neutral" href="src/contact.html">CONTACT</a>
+          </li>
         </ul>
       </div>
-      <a href="javascript:void(0)" class="icon" onclick="navigation(), iconShift()">
-        <i  id="navIcon" class="fa-solid fa-bars"></i>
+      <a
+        href="javascript:void(0)"
+        class="icon"
+        onclick="navigation(), iconShift()"
+      >
+        <i id="navIcon" class="fa-solid fa-bars"></i>
       </a>
-
     </nav>
 
     <header>
@@ -101,7 +108,10 @@
       </script>
 
       <!--Skapa en "review" fält, där man kan se en block av reviews-->
-      <div class="flex flex-col mx-8 py-14 sm:flex-col md:flex-col lg:flex-row delay-[400ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0" data-taos-offset="300">
+      <div
+        class="flex flex-col mx-8 py-14 sm:flex-col md:flex-col lg:flex-row delay-[400ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0"
+        data-taos-offset="300"
+      >
         <div class="border-2 border-black m-4 p-8">
           <div class="avatar">
             <div
@@ -173,7 +183,9 @@
         <ul class="text-center">
           <li><a class="link link-neutral" href="src/menu.html">MENU</a></li>
           <li><a class="link link-neutral" href="src/about.html">ABOUT</a></li>
-          <li><a class="link link-neutral" href="src/contact.html">CONTACT</a></li>
+          <li>
+            <a class="link link-neutral" href="src/contact.html">CONTACT</a>
+          </li>
         </ul>
       </div>
       <div class="pt-6 flex flex-row gap-6 text-3xl">

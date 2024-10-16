@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>contact</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link href="output.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/script.js"></script>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link href="output.css" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet"
+        />
+        <script
+          src="https://kit.fontawesome.com/e1805b4125.js"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="/script.js"></script>
+      </head>
 
   <body>
     <nav>
-      <h1><a href="../index.html">GritSushi</a></h1>
-      <div class="navlinks">
-        <ul>
-          <li><a class="link link-neutral" href="menu.html">MENU</a></li>
-          <li><a class="link link-neutral" href="about.html">ABOUT</a></li>
-          <li>
-            <a class="link link-neutral badge badge-neutral" href="contact.html"
-              >CONTACT</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
+        <h1><a href="/index.html">GritSushi</a></h1>
+        <div class="navContainer">
+          <ul id="listing" class="navlinks">
+            <li><a class="link link-neutral" href="menu.html">MENU</a></li>
+            <li><a class="link link-neutral" href="about.html">ABOUT</a></li>
+            <li>
+              <a class="link link-neutral badge badge-neutral" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <a
+          href="javascript:void(0)"
+          class="icon"
+          onclick="navigation(), iconShift()"
+        >
+          <i id="navIcon" class="fa-solid fa-bars"></i>
+        </a>
+      </nav>
 
     <main class="h-[78%] bg-white flex flex-col justify-center items-center">
       <h1 class="font-bold text-black text-2xl pb-14">
