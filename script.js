@@ -17,6 +17,9 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+//-----------------------------------------------------------------------------------------------
+
+//Function för hamburgar meny
 function navigation() {
   let navLinks = document.getElementById("listing");
   navLinks.classList.toggle("show");
@@ -28,6 +31,9 @@ function iconShift() {
   icon.classList.toggle("fa-x");
 }
 
+//----------------------------------------------------------------------------------------------
+
+// Function för bildgalleri
 document.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.createElement("div");
   lightbox.id = "lightbox";
@@ -48,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
   lightbox.appendChild(leftArrow);
   lightbox.appendChild(rightArrow);
 
-  // Function to show the image based on index
   function showImage(index) {
     if (index < 0) {
       index = images.length - 1; // Wrap to last image
@@ -57,40 +62,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     currentImageIndex = index;
-
-    // Clear the lightbox content before adding the new image
     const img = document.createElement("img");
     img.src = images[currentImageIndex].src;
 
-    lightbox.innerHTML = ""; // Clear everything first
+    lightbox.innerHTML = "";
     lightbox.appendChild(leftArrow);
     lightbox.appendChild(rightArrow);
     lightbox.appendChild(img);
   }
 
-  // Event listener for image clicks
   images.forEach((image, index) => {
     image.addEventListener("click", (e) => {
       lightbox.classList.add("active");
-      showImage(index); // Display clicked image
+      showImage(index);
     });
   });
 
-  // Event listeners for the arrows
   leftArrow.addEventListener("click", (e) => {
-    showImage(currentImageIndex - 1); // Show previous image
+    showImage(currentImageIndex - 1);
   });
 
   rightArrow.addEventListener("click", (e) => {
-    showImage(currentImageIndex + 1); // Show next image
+    showImage(currentImageIndex + 1);
   });
 
   // Close lightbox when clicked outside of the image
   lightbox.addEventListener("click", (e) => {
-    if (e.target !== e.currentTarget) return; // Prevent closing when clicking on the image itself
+    if (e.target !== e.currentTarget) return;
     lightbox.classList.remove("active");
   });
 });
+
+//-----------------------------------------------------------------------------------------------
 
 // Funktion för tack-meddalande för "submit" knappen
 document.addEventListener("DOMContentLoaded", () => {
