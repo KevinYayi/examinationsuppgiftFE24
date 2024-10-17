@@ -56,7 +56,7 @@
     </nav>
 
     <main class="h-[78%] bg-white flex flex-col justify-center items-center">
-      <h1 class="font-bold text-black text-2xl pb-14">
+      <h1 class="font-bold text-black text-2xl pb-16">
         Söker medarbetare <br />
         Ansök nu!
       </h1>
@@ -69,13 +69,21 @@
       <div class="input input-bordered w-full max-w-xs bg-white m-6 p-2">
         <input type="text" id="email" name="email" placeholder="Email" />
       </div>
+      <select class="select border-2 w-full max-w-xs m-6 p-2">
+        <option disabled selected>Years of experiense?</option>
+        <option>0-1 years</option>
+        <option>1-2 years</option>
+        <option>2-3 years</option>
+        <option>3+ years</option>
+      </select>
+      <div class="p-0.5">
+      <p>Send in your CV</p>
+      </div>
       <input
         type="file"
         class="file-input file-input-bordered w-full max-w-xs bg-white m-6"
       />
-      <div
-        class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-blue-400 text-white mt-10"
-      >
+      <div class="btn bg-blue-400 text-white mt-10">
         <input type="submit" id="submit" value="Send" />
       </div>
     </main>
