@@ -221,6 +221,38 @@ footer ul li {
   right: 5%;
 }
 
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+form, #thankYouMessage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+#thankYouMessage {
+  position: absolute;
+  top: -10000px;
+}
+
+input, select, button {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 768px) {
   .navlinks {
     display: none;

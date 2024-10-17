@@ -28,22 +28,22 @@ function iconShift() {
   icon.classList.toggle("fa-x");
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const lightbox = document.createElement('div');
-  lightbox.id = 'lightbox';
+document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = document.createElement("div");
+  lightbox.id = "lightbox";
   document.body.appendChild(lightbox);
 
-  const images = document.querySelectorAll('img');
+  const images = document.querySelectorAll("img");
   let currentImageIndex = -1; // To track the current image
 
   // Create navigation arrows
-  const leftArrow = document.createElement('div');
-  leftArrow.innerHTML = '&#10094;'; // Left arrow character
-  leftArrow.classList.add('arrow', 'left-arrow');
-  
-  const rightArrow = document.createElement('div');
-  rightArrow.innerHTML = '&#10095;'; // Right arrow character
-  rightArrow.classList.add('arrow', 'right-arrow');
+  const leftArrow = document.createElement("div");
+  leftArrow.innerHTML = "&#10094;"; // Left arrow character
+  leftArrow.classList.add("arrow", "left-arrow");
+
+  const rightArrow = document.createElement("div");
+  rightArrow.innerHTML = "&#10095;"; // Right arrow character
+  rightArrow.classList.add("arrow", "right-arrow");
 
   lightbox.appendChild(leftArrow);
   lightbox.appendChild(rightArrow);
@@ -55,14 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (index >= images.length) {
       index = 0; // Wrap to first image
     }
-    
+
     currentImageIndex = index;
 
     // Clear the lightbox content before adding the new image
-    const img = document.createElement('img');
+    const img = document.createElement("img");
     img.src = images[currentImageIndex].src;
-    
-    lightbox.innerHTML = ''; // Clear everything first
+
+    lightbox.innerHTML = ""; // Clear everything first
     lightbox.appendChild(leftArrow);
     lightbox.appendChild(rightArrow);
     lightbox.appendChild(img);
@@ -70,24 +70,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Event listener for image clicks
   images.forEach((image, index) => {
-    image.addEventListener('click', e => {
-      lightbox.classList.add('active');
+    image.addEventListener("click", (e) => {
+      lightbox.classList.add("active");
       showImage(index); // Display clicked image
     });
   });
 
   // Event listeners for the arrows
-  leftArrow.addEventListener('click', e => {
+  leftArrow.addEventListener("click", (e) => {
     showImage(currentImageIndex - 1); // Show previous image
   });
 
-  rightArrow.addEventListener('click', e => {
+  rightArrow.addEventListener("click", (e) => {
     showImage(currentImageIndex + 1); // Show next image
   });
 
   // Close lightbox when clicked outside of the image
-  lightbox.addEventListener('click', e => {
+  lightbox.addEventListener("click", (e) => {
     if (e.target !== e.currentTarget) return; // Prevent closing when clicking on the image itself
-    lightbox.classList.remove('active');
+    lightbox.classList.remove("active");
+  });
+});
+
+// Funktion för tack-meddalande för "submit" knappen
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("applicationForm");
+  const formContainer = document.getElementById("formContainer");
+  const thankYouMessage = document.getElementById("thankYouMessage");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent form submission from reloading the page
+
+    // Hide the form and heading
+    formContainer.style.display = "none";
+
+    // Move the thank you message into view
+    thankYouMessage.style.position = "static"; // Bring it back into the normal flow
   });
 });
