@@ -60,7 +60,7 @@ nav ul li {
   font-weight: 600;
 }
 
-header {
+#WelcomeMsg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,9 +69,8 @@ header {
   padding: 15px;
 }
 
-header h2 {
+#WelcomeMsg h2 {
   font-family: Bebas Neue;
-  font-size: 45px;
   font-weight: 800;
   color: white;
   text-transform: capitalize;
@@ -185,7 +184,7 @@ footer ul li {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, 0.8);
   display: none;
 }
 
@@ -229,7 +228,8 @@ footer ul li {
   display: block;
 }
 
-form, #thankYouMessage {
+form,
+#thankYouMessage {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -241,7 +241,9 @@ form, #thankYouMessage {
   top: -10000px;
 }
 
-input, select, button {
+input,
+select,
+button {
   width: 100%;
   margin-bottom: 16px;
 }
@@ -263,7 +265,7 @@ input, select, button {
   }
 
   .icon {
-    display: block; 
+    display: block;
     font-size: 30px;
     position: absolute;
     right: 30px;

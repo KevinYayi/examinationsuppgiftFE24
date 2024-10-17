@@ -37,33 +37,37 @@
   </head>
 
   <body>
-    <nav>
-      <h1><a href="index.html">GritSushi</a></h1>
-      <div class="navContainer">
-        <ul id="listing" class="navlinks">
-          <li><a class="link link-neutral" href="src/menu.html">MENU</a></li>
-          <li><a class="link link-neutral" href="src/about.html">ABOUT</a></li>
-          <li>
-            <a class="link link-neutral" href="src/contact.html">CONTACT</a>
-          </li>
-        </ul>
-      </div>
-      <a
-        href="javascript:void(0)"
-        class="icon"
-        onclick="navigation(), iconShift()"
-      >
-        <i id="navIcon" class="fa-solid fa-bars"></i>
-      </a>
-    </nav>
-
     <header>
+      <nav>
+        <h1><a href="index.html">GritSushi</a></h1>
+        <div class="navContainer">
+          <ul id="listing" class="navlinks">
+            <li><a class="link link-neutral" href="src/menu.html">MENU</a></li>
+            <li>
+              <a class="link link-neutral" href="src/about.html">ABOUT</a>
+            </li>
+            <li>
+              <a class="link link-neutral" href="src/contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <a
+          href="javascript:void(0)"
+          class="icon"
+          onclick="navigation(), iconShift()"
+        >
+          <i id="navIcon" class="fa-solid fa-bars"></i>
+        </a>
+      </nav>
+    </header>
+
+    <div id="WelcomeMsg">
       <h2
         class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 text-center text-3xl md:text-6xl"
       >
-        Välkommen in till Malmös bästa SUSHI!
+        Welcome to Malmös best SUSHI!
       </h2>
-    </header>
+    </div>
 
     <main class="bg-stone-200">
       <!--Skapa en bildgalleri med olika typer av Sushi-->
@@ -106,7 +110,6 @@
           },
         });
       </script>
-      
 
       <!--Skapa en "review" fält, där man kan se en block av reviews-->
       <div
