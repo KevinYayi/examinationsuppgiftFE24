@@ -35,11 +35,16 @@ function iconShift() {
 
 // Function för bildgalleri
 document.addEventListener("DOMContentLoaded", () => {
+  // Check if the body has the id 'menu-page'
+  const isMenuPage = document.body.id === "menu-page";
+  if (!isMenuPage) return; // Exit if not on the menu page
+
   const lightbox = document.createElement("div");
   lightbox.id = "lightbox";
   document.body.appendChild(lightbox);
 
-  const images = document.querySelectorAll("img");
+  // Select only the images with the lightbox-image class
+  const images = document.querySelectorAll(".lightbox-image");
   let currentImageIndex = -1; // To track the current image
 
   // Create navigation arrows
@@ -92,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lightbox.classList.remove("active");
   });
 });
+
 
 //-----------------------------------------------------------------------------------------------
 
