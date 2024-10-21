@@ -1,4 +1,4 @@
-var swiper = new Swiper(".mySwiper", {
+/*var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
@@ -15,7 +15,7 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-});
+}); */
 
 //-----------------------------------------------------------------------------------------------
 
@@ -35,25 +35,22 @@ function iconShift() {
 
 // Function för bildgalleri
 document.addEventListener("DOMContentLoaded", () => {
-  // Check if the body has the id 'menu-page'
   const isMenuPage = document.body.id === "menu-page";
-  if (!isMenuPage) return; // Exit if not on the menu page
+  if (!isMenuPage) return;
 
   const lightbox = document.createElement("div");
   lightbox.id = "lightbox";
   document.body.appendChild(lightbox);
 
-  // Select only the images with the lightbox-image class
   const images = document.querySelectorAll(".lightbox-image");
-  let currentImageIndex = -1; // To track the current image
+  let currentImageIndex = -1; 
 
-  // Create navigation arrows
   const leftArrow = document.createElement("div");
-  leftArrow.innerHTML = "&#10094;"; // Left arrow character
+  leftArrow.innerHTML = "&#10094;"; 
   leftArrow.classList.add("arrow", "left-arrow");
 
   const rightArrow = document.createElement("div");
-  rightArrow.innerHTML = "&#10095;"; // Right arrow character
+  rightArrow.innerHTML = "&#10095;"; 
   rightArrow.classList.add("arrow", "right-arrow");
 
   lightbox.appendChild(leftArrow);
@@ -61,9 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showImage(index) {
     if (index < 0) {
-      index = images.length - 1; // Wrap to last image
+      index = images.length - 1; 
     } else if (index >= images.length) {
-      index = 0; // Wrap to first image
+      index = 0; 
     }
 
     currentImageIndex = index;
@@ -108,12 +105,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const thankYouMessage = document.getElementById("thankYouMessage");
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent form submission from reloading the page
+    e.preventDefault();
 
-    // Hide the form and heading
+  
     formContainer.style.display = "none";
 
-    // Move the thank you message into view
-    thankYouMessage.style.position = "static"; // Bring it back into the normal flow
+   
+    thankYouMessage.style.position = "static"; 
   });
 });
